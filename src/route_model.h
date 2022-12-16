@@ -25,9 +25,9 @@ class RouteModel : public Model {
 
         Node(){}
         Node(int idx, RouteModel * search_model, Model::Node node) : Model::Node(node), parent_model(search_model), index(idx) {}
-
-      private:
         int index;
+      private:
+
         Node * FindNeighbor(std::vector<int> node_indices);
         RouteModel * parent_model = nullptr;
     };
